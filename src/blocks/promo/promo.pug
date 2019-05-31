@@ -1,0 +1,12 @@
+mixin promo(title, text, link)
+  .promo__inner
+    .container
+      .promo__wrap
+        .promo__title
+          h1= title
+
+        .promo__text
+          p= text
+
+        .promo__btn
+          +btn('Найти тур →', 'circle')(href= link)

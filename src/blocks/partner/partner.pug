@@ -1,0 +1,22 @@
+mixin partner(partners)
+  .partner__item
+    .partner__logo
+      img(src=/img/ + partners.logo + '.jpg')
+
+    ul.partner__info
+      li.partner__contacts
+        svg(width="20", height="20")
+          use(xlink:href="img/sprite-svg.svg#point")
+        a(href="#")= partners.address
+      li.partner__contacts
+        svg(width="20", height="20")
+          use(xlink:href="img/sprite-svg.svg#phone")
+        a(href="tel:" + partners.phone)= partners.phone
+      li.partner__contacts
+        svg(width="20", height="20")
+          use(xlink:href="img/sprite-svg.svg#mail")
+        a(href="mailto:" + partners.mail)= partners.mail
+      li.partner__contacts
+        svg(width="20", height="20")
+          use(xlink:href="img/sprite-svg.svg#site")
+        a(href="http://" + partners.site)= partners.site

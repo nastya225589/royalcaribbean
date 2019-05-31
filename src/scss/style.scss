@@ -9,5 +9,25 @@
 @include sprites($spritesheet-sprites); // Генератор селекторов для всех картинок спрайта
 
 // БЭМ-блоки. Один БЭМ-блок = 1 файл. ВСЕГДА.
+@import './node_modules/slick-carousel/slick/slick.scss';
+@import './node_modules/slick-carousel/slick/slick-theme.scss';
+@import './node_modules/select2/src/scss/core.scss';
 @import './src/blocks/page/page.scss';
 @import './src/blocks/main-nav/main-nav.scss';
+@import './src/blocks/page-header/page-header.scss';
+@import './src/blocks/page-footer/page-footer.scss';
+@import './src/blocks/logo/logo.scss';
+@import './src/blocks/promo/promo.scss';
+@import './src/blocks/btn/btn.scss';
+@import './src/blocks/form/form.scss';
+@import './src/blocks/map/map.scss';
+@import './src/blocks/liner/liner.scss';
+@import './src/blocks/card/card.scss';
+@import './src/blocks/about/about.scss';
+@import './src/blocks/cruise/cruise.scss';
+@import './src/blocks/english/english.scss';
+@import './src/blocks/statistic/statistic.scss';
+@import './src/blocks/partner/partner.scss';
+@import './src/blocks/footer-nav/footer-nav.scss';
+@import './src/blocks/place/place.scss';
+@import './src/blocks/buy/buy.scss';

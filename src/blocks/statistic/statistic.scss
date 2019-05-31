@@ -1,0 +1,67 @@
+.statistic {
+  padding-bottom: 60px;
+
+  @media (max-width: $screen-sm) {
+    padding-bottom: 20px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  &__item {
+    width: 280px;
+  }
+
+  &__number {
+    margin: 0 auto;
+    background: url(/img/sun.png);
+    height: 220px;
+    width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: $screen-sm) {
+      background: url(/img/sun-mob.png);
+      height: 140px;
+      width: 140px;
+    }
+
+    span {
+      font-family: $font-family;
+      text-align: center;
+      font-style: normal;
+      font-weight: bold;
+      font-size: $font-size--h2;
+      line-height: 140.88%;
+      color: #FFFFFF;
+
+      @media (max-width: $screen-sm) {
+        font-size: $font-size--l;
+      }
+    }
+  }
+
+  &__text {
+    font-family: $font-family-second;
+    font-style: normal;
+    font-weight: 300;
+    font-size: $font-size--m;
+    line-height: 140.4%;
+    text-align: center;
+    color: $text-color;
+
+    @media (max-width: $screen-sm) {
+      font-size: $font-size--s;
+    }
+
+    p {
+      @media (max-width: $screen-sm) {
+        margin-top: 0;
+      }
+    }
+  }
+}

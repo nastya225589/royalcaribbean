@@ -1,0 +1,97 @@
+mixin form()
+  form.form
+    fieldset.form__fieldset
+      div.checkout__user-data
+        .field-text
+          .field-text__input-wrap
+            svg.field-text__input-icon(width="15", height="15")
+              use(xlink:href="img/sprite-svg.svg#person")
+            input.field-text__input(type="text" name="firstname" id="firstname" placeholder="Ваше имя")
+          .field-text__input-wrap
+            svg.field-text__input-icon(width="15", height="15")
+              use(xlink:href="img/sprite-svg.svg#call")
+            input.field-text__input(type="tel" name="phone" id="phone" placeholder="+7 - (___) - ___ - __ - __")
+    fieldset.form__fieldset
+      div.checkout__calendar-data
+        label.field-calendar
+          span.field-calendar__input-wrap
+            svg.field-calendar__input-icon(width="15", height="15")
+              use(xlink:href="img/sprite-svg.svg#calendar")
+            input.field-calendar__input(type="text" name="firstname" id="firstname" placeholder="Дата начала")
+            svg.field-calendar__input-arrow.field-calendar__input-arrow--start(width="9", height="9")
+              use(xlink:href="img/sprite-svg.svg#input-arrow")
+            div.field-calendar__start
+          span.field-calendar__input-wrap
+            svg.field-calendar__input-icon(width="15", height="15")
+              use(xlink:href="img/sprite-svg.svg#calendar")
+            input.field-calendar__input(type="text" name="firstname" id="firstname" placeholder="Дата окончания")
+            svg.field-calendar__input-arrow.field-calendar__input-arrow--end(width="9", height="9")
+              use(xlink:href="img/sprite-svg.svg#input-arrow")
+            div.field-calendar__end
+    fieldset.form__fieldset
+      .field-select
+        .field-select__select-wrap
+          svg.field-select__select-icon(width="15", height="15")
+            use(xlink:href="img/sprite-svg.svg#point")
+          select.field-select_select
+            option(value="0" disabled selected) Направление
+            option(value="1") Средиземноморье
+            option(value="2") Карибы и Багамы
+            option(value="3") Азия
+            option(value="4") Персидский залив
+
+        .field-select__select-wrap
+          svg.field-select__select-icon(width="15", height="15")
+            use(xlink:href="img/sprite-svg.svg#family")
+          input.field-select__input(type="text" name="firstname" id="firstname" placeholder="Дата окончания")
+          svg.field-select__input-arrow(width="9", height="9")
+            use(xlink:href="img/sprite-svg.svg#input-arrow")
+
+
+          .field-select__family
+            .field-select__family_item
+              svg.field-select__family-icon(width="15", height="15")
+                use(xlink:href="img/sprite-svg.svg#man")
+
+              .field-select__family-title
+                span Взрослые
+
+              .field-select__family-button
+                svg.field-select__family-btn(width="10", height="10")
+                  use(xlink:href="img/sprite-svg.svg#minus")
+                span.field-select__family-value 1
+                svg.field-select__family-btn(width="10", height="10")
+                  use(xlink:href="img/sprite-svg.svg#plus")
+
+            .field-select__family_item
+              svg.field-select__family-icon(width="15", height="15")
+                use(xlink:href="img/sprite-svg.svg#child")
+
+              .field-select__family-title
+                span Ребенок
+                small от 2 до 11 лет
+
+              .field-select__family-button
+                svg.field-select__family-btn(width="10", height="10")
+                  use(xlink:href="img/sprite-svg.svg#minus")
+                span.field-select__family-value 1
+                svg.field-select__family-btn(width="10", height="10")
+                  use(xlink:href="img/sprite-svg.svg#plus")
+
+            .field-select__family_item
+              svg.field-select__family-icon(width="15", height="15")
+                use(xlink:href="img/sprite-svg.svg#baby")
+
+              .field-select__family-title
+                span Младенец
+                small до 2 лет
+
+              .field-select__family-button
+                svg.field-select__family-btn(width="10", height="10")
+                  use(xlink:href="img/sprite-svg.svg#minus")
+                span.field-select__family-value 1
+                svg.field-select__family-btn(width="10", height="10")
+                  use(xlink:href="img/sprite-svg.svg#plus")
+
+    .form__btn
+      +btn('Отправить →', 'circle')

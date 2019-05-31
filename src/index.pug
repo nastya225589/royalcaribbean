@@ -2,13 +2,260 @@ extends templates/layout-home.pug
 
 block meta
   title Home
-  meta(name='description', content='Home page!')
+  meta(name='dayription', content='Home page!')
 
 block nav
-  -var selected = 'blog';
+  -var selected = 'Маршртуты';
   +main-nav(selected)
 
 block content
+  section.promo
+    +promo("Карибские и Багамские острова", "Идеальным местом для побега от цивилизации, идеальным пристанищем всех, кто хочет тепла и красивого отдыха послужат Карибские и Багамские острова. Старые форты, гроты, уединённые островки, пляжи с чистейшим мелким песком и изумительно лазурной водой – всё это словно создано для идеального отдыха. А белоснежные лайнеры компании Royal Caribbean доставят вас до всего этого богатства.", "#","/img/bg-promo.png")
+
+    -
+      var cards = [
+        {
+          photo:'card',
+          title:'Круиз по Багамам',
+          day:'3 дня',
+          data:'6  мая 2019',
+          link:'#'
+        },
+        {
+          photo:'card',
+          title:'Круиз по Багамам',
+          day:'3 дня',
+          data:'6  мая 2019',
+          link:'#'
+        },
+        {
+          photo:'card',
+          title:'Круиз по Багамам',
+          day:'3 дня',
+          data:'6  мая 2019',
+          link:'#'
+        }
+      ];
+
+    section.card
+      .container
+        .card__wrapper
+          .card__list
+            for card in cards
+              +card(card)
+
+  section.about
+    +about()
+
+  -
+    var cruises = [
+      {
+        icon:'double-bed',
+        name:'Комфортабельные каюты',
+        text:'Мы предлагаем каюты разного класса, но каждая из них оборудована личным туалетом и душем, вам будет комфортно!'
+      },
+      {
+        icon:'confetti',
+        name:'Развлекательные программы',
+        text:'Театры, бары, ночные клубы, рестораны, казино - это лишь малая часть того, что размещается на нашем лайнере.'
+      },
+      {
+        icon:'maternity',
+        name:'Отдых всей семьей',
+        text:'В наши круизы мы приглашаем аниматоров, на борту корабля находится несколько игровых комнат и площадок, а в меню включены специальные десткие блюда'
+      },
+      {
+        icon:'dinner',
+        name:'Высококлассное питание на борту',
+        text:'На наших лайнерах вы можете попробовать кухни разных народов мира, мы так же предлагаем специализированное меню для детей и вегетарианцев.'
+      }
+    ];
+
+  section.cruise
+    .container
+      .cruise__wrap
+        .cruise__inner
+          h2.title.cruise__title Морские круизы с Royal Caribbean
+          p.cruise__text Наших клиентов ждут лучшие условия на борту и несколько ночей совершенно незабываемого нового мира, который не захочется покидать. Мы подберем вам подходящий под график и финансы круиз. Посетите архипелаги Карибского моря – узнайте, что за приключение ждёт вас!
+          .cruise__photo.cruise__photo--mob
+            img(alt="Зиплайн на острове Лабади, Гаити" src="/img/cruise-mob.jpg")
+            p Зиплайн на острове Лабади, Гаити
+
+          .cruise__list
+            for cruise in cruises
+              +cruise(cruise)
+
+        .cruise__photo
+          img(alt="Зиплайн на острове Лабади, Гаити" src="/img/cruise.jpg")
+          p Зиплайн на острове Лабади, Гаити
+  -
+    var liners = [
+      {
+        class:'Класс  OASIS',
+        iframe:'https://www.youtube.com/embed/cy2h1NFnZrw',
+        name:'Simphony of the Seas',
+        text:'Новейший корабль компании Royal Caribbean. Его первый круиз состоялся в марте 2018 года из Барселоны. Symphony of the Seas — самый большой лайнер в мире. Этот 18-палубный гигант вмещает 6780 пассажиров и 2175 членов экипажа.',
+        link:'#',
+        items: [
+          '2775 кают',
+          'SPA, Welness',
+          'Аквапарк'
+        ],
+        items2: [
+          '103 экскурсии для пассажиров этого лайнера',
+          '20 вариантов питания',
+          'Каток, баскетбольная площадка, скалодром'
+        ]
+      },
+      {
+        class:'Класс  OASIS',
+        iframe:'https://www.youtube.com/embed/cy2h1NFnZrw',
+        name:'Simphony of the Seas',
+        text:'Новейший корабль компании Royal Caribbean. Его первый круиз состоялся в марте 2018 года из Барселоны. Symphony of the Seas — самый большой лайнер в мире. Этот 18-палубный гигант вмещает 6780 пассажиров и 2175 членов экипажа.',
+        link:'#',
+        items: [
+          '2775 кают',
+          'SPA, Welness',
+          'Аквапарк'
+        ],
+        items2: [
+          '103 экскурсии для пассажиров этого лайнера',
+          '20 вариантов питания',
+          'Каток, баскетбольная площадка, скалодром'
+        ]
+      }
+    ];
+
+  section.liner
+    .container
+      h2.title.liner__title Лайнер, на котором вы поплывете
+
+      .liner__carousel
+        for liner in liners
+          +liner(liner)
 
 
+  section.english
+    .container
+      +english()
 
+  -
+    var statistics = [
+      {
+        number:'1000',
+        text:'Совершенных круизов по всему свету, от Аляски до Австралии'
+      },
+      {
+        number:'7',
+        text:'Популярных направлений  по всему миру'
+      },
+      {
+        number:'100',
+        text:'Стран вы можете постетить, путеществуя вместе с нами'
+      }
+    ];
+
+  section.statistic
+    .container
+
+      .statistic__list
+        for statistic in statistics
+          +statistic(statistic)
+
+  -
+    var places = [
+      {
+        title:'остров Лабади, Гаити',
+        img:'place',
+        text:'Плавание на каяке'
+      },
+      {
+        title:'остров Лабади, Гаити',
+        img:'place',
+        text:'Плавание на каяке'
+      },
+      {
+        title:'остров Лабади, Гаити',
+        img:'place',
+        text:'Плавание на каяке'
+      },
+      {
+        title:'остров Лабади, Гаити',
+        img:'place',
+        text:'Плавание на каяке'
+      },
+      {
+        title:'остров Лабади, Гаити',
+        img:'place',
+        text:'Плавание на каяке'
+      },
+      {
+        title:'остров Лабади, Гаити',
+        img:'place',
+        text:'Плавание на каяке'
+      }
+    ];
+
+  section.place
+    .container
+      h2.title.place__title Места, которые вы посетите
+
+      .place__carousel
+        for place in places
+          +place(place)
+
+  section.buy
+    .container
+      +buy()
+
+  section.map
+    .container
+      h2.title.map__title Порты отправки в круиз по Карибскому региону
+      +map()
+
+  -
+    var partners = [
+      {
+        logo:'infoflot',
+        address:'Москва, Осторженка, д.10',
+        phone: '+7 (495) 662-3736',
+        mail:'moscow@inflottravel.com',
+        site:'inflottravel.com'
+      },
+      {
+        logo:'crouise-house',
+        address:'Москва, Осторженка, д.10',
+        phone: '+7 (495) 662-3736',
+        mail:'moscow@inflottravel.com',
+        site:'inflottravel.com'
+      },
+      {
+        logo:'9415',
+        address:'Москва, Осторженка, д.10',
+        phone: '+7 (495) 662-3736',
+        mail:'moscow@inflottravel.com',
+        site:'inflottravel.com'
+      },
+      {
+        logo:'9415',
+        address:'Москва, Осторженка, д.10',
+        phone: '+7 (495) 662-3736',
+        mail:'moscow@inflottravel.com',
+        site:'inflottravel.com'
+      },
+      {
+        logo:'9415',
+        address:'Москва, Осторженка, д.10',
+        phone: '+7 (495) 662-3736',
+        mail:'moscow@inflottravel.com',
+        site:'inflottravel.com'
+      }
+    ];
+
+  section.partner#partner
+    .container
+      h2.title.partner__title Приобрести путевки у наших партнеров
+
+      .partner__list
+        for partner in partners
+          +partner(partner)

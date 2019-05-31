@@ -1,0 +1,14 @@
+mixin page-header()
+  header.page-header
+    .container
+      .page-header__inner
+        .page-header__wrapper
+          button.toggal.page-header__toggal
+            span
+          .page-header__menu
+            +logo()
+
+            block nav
+
+            .page-header__btn
+              +btn('Оставить заявку', 'circle')(href= link)

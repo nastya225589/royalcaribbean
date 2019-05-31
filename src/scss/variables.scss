@@ -2,14 +2,28 @@ $gray-dark:                   hsl(0, 0%, 20%);
 $gray:                        hsl(0, 0%, 50%);
 $gray-light:                  hsl(0, 0%, 80%);
 
-$text-color:                  $gray-dark;
+$text-color:                  #000;
+$main-color:                  #E5E5E5;
+$second-color:                #C4C4C4;
+$third-color:                 #051854;
+$fourth-color:                #FBBA31;
+$fifth-color:                 #1174B8;
+$sixth-color:                 #F2EFEF;
 
-$font-family:                 'Open Sans_my', sans-serif;
+$font-family:                 'Raleway', sans-serif;
+$font-family-second:          'Lato', sans-serif;
 $font-size:                   14px;
-$line-height:                 1.4;
+$font-size--xs:               12px;
+$font-size--s:                16px;
+$font-size--m:                18px;
+$font-size--l:                20px;
+$font-size--h1:               40px;
+$font-size--h2:               30px;
+$font-size--h3:               24px;
+$line-height:                 1.6;
 
+// @media
 $screen-xs:                   480px;
 $screen-sm:                   768px;
-$screen-md:                   992px;
+$screen-md:                   1000px;
 $screen-lg:                   1200px;
-$screen-xl:                   1920px;

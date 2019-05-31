@@ -1,0 +1,31 @@
+mixin liner(liners)
+  .liner__list
+    .liner__item
+      .liner__video
+        span.liner__class= liners.class
+        .liner__iframe
+          iframe(width="380" height="380" src= liners.iframe frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen)
+
+      .liner__description
+        .liner__name= liners.name
+        .liner__text= liners.text
+
+        .liner-options
+          ul.liner-options__list
+            - liners.items.forEach(function(item) {
+              li.liner-options__item
+                svg.liner-options__icon(width="20", height="20")
+                  use(xlink:href="img/sprite-svg.svg#checked")
+                =item
+            - });
+
+          ul.liner-options__list
+            - liners.items2.forEach(function(item) {
+              li.liner-options__item
+                svg.liner-options__icon(width="20", height="20")
+                  use(xlink:href="img/sprite-svg.svg#checked")
+                =item
+            - });
+
+        .liner__btn
+          +btn('Подробнее →', 'circle')(href= liners.link)

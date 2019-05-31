@@ -1,0 +1,8 @@
+mixin cruise(cruises)
+  .cruise__item
+    .cruise__icon
+      svg(width="30", height="30")
+        use(xlink:href="img/sprite-svg.svg#" + cruises.icon)
+    .cruise__desc
+      h3.cruise__name= cruises.name
+      p.cruise__text= cruises.text

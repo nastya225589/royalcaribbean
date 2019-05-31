@@ -1,0 +1,11 @@
+mixin statistic(statistics)
+  .statistic__item
+    //.statistic__icon
+    //  svg(width="218", height="230")
+    //    use(xlink:href="img/sprite-svg.svg#sun")
+
+    .statistic__number
+      span= statistics.number
+
+    .statistic__text
+        p= statistics.text

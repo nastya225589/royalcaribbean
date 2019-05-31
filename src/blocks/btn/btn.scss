@@ -1,0 +1,77 @@
+.btn {
+  z-index: 0;
+  padding: 9px 0;
+  display: inline-block;
+  position: relative;
+  min-width: 180px;
+  text-align: center;
+  color: $fifth-color;
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: bold;
+  font-size: $font-size - 2px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background: $fourth-color;
+    transition: 0.3s all ease;
+    color: #fff;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+
+  &--circle {
+    padding: 12px 0;
+    font-size: $font-size;
+    color: $text-color;
+    background: transparent;
+    margin-left: 28px;
+    min-width: 137px;
+    text-decoration: none;
+    line-height: 4rem;
+    transition: 0.3s all ease;
+    -ms-text-align-last: right;
+    text-align: left;
+
+    &:hover,
+    &:focus {
+      background: transparent;
+      color: $text-color;
+    }
+
+    &:before, &:after {
+      z-index: -1;
+      content: ' ';
+      width: 5rem;
+      height: 5rem;
+      position: absolute;
+      left: -27px;
+      top: 7px;
+      border-radius: 4rem;
+      transition: 0.5s all ease;
+    }
+    &:before {
+      background: $fourth-color;
+    }
+
+    &:hover:before, &:focus:before {
+      width: 100%;
+    }
+
+    &:active, &:focus {
+      color: white;
+      &:after {
+        width: 100%;
+        background: $fourth-color;
+      }
+    }
+  }
+}

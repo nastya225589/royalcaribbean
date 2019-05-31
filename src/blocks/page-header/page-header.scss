@@ -1,0 +1,158 @@
+.page-header {
+
+  .container {
+    @media (max-width: $screen-sm) {
+      padding: 0;
+    }
+  }
+
+  &__inner {
+    position: relative;
+  }
+
+  &__wrapper {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+  }
+
+  &__toggal {
+    display: none;
+    margin: 20px 20px 0;
+    width: 40px;
+    height: 40px;
+    background: $fourth-color;
+    border-radius: 50%;
+    border: none;
+
+    @media (max-width: $screen-sm) {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
+
+    span {
+      display: none;
+      position: relative;
+      width: 20px;
+      height: 2px;
+      vertical-align: middle;
+      background: #fff;
+      border-radius: 50px;
+
+      &:after, &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 20px;
+        height: 2px;
+        background: #fff;
+        border-radius: 50px;
+      }
+
+      &:after {
+        top: 6px;
+      }
+
+      &:before {
+        top: -6px;
+      }
+
+      @media (max-width: $screen-sm) {
+        display: inline-block;
+      }
+    }
+  }
+
+  &__menu {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: $screen-sm) {
+      display: none;
+
+
+      &--open {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 0;
+        padding: 73px 50px 20px 50px;
+        background: #fff;
+
+        @media (max-width: 340px) {
+          padding: 53px 50px 219px 50px;
+        }
+
+        .page-header__menu {
+          display: block;
+        }
+
+        .page-header__toggal {
+          background: none;
+
+          span {
+            background: none;
+            width: 25px;
+
+            &:after, &:before {
+              content: '';
+              position: absolute;
+              left: 0;
+              width: 30px;
+              height: 2px;
+              background: $third-color;
+              border-radius: 50px;
+            }
+
+            &:after {
+              top: 0;
+              transform: rotate(45deg);
+            }
+
+            &:before {
+              top: 0;
+              transform: rotate(134deg);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .logo {
+    @media (max-width: $screen-sm) {
+      margin-bottom: 14px;
+    }
+  }
+
+  &__btn {
+    display: none;
+
+    @media (max-width: $screen-sm) {
+      display: block;
+    }
+
+    .btn--circle {
+      min-width: 219px;
+      margin-left: 0;
+      text-align: center;
+      background: transparent;
+      color: #000;
+
+      &:before, &:after {
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
+}

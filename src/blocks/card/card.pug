@@ -1,0 +1,15 @@
+mixin card(cards)
+  div(class= cards.hide ? 'card__item hide-mobile' : 'card__item')
+    .card__photo
+      img(alt=cards.title src="/img/" + cards.photo + ".jpg")
+
+    .card__description
+      .card__btn
+        +btn('Подробнее')(href= cards.link)
+
+      .card__wrap
+        h3.card__title
+          a.card__link(href= cards.link)= cards.title
+        .card__period
+          p.card__day= cards.day
+          p.card__data= cards.data

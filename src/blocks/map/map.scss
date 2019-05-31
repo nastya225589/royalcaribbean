@@ -1,0 +1,12 @@
+.map {
+  padding-bottom: 60px;
+
+  @media (max-width: $screen-sm) {
+    display: none;
+  }
+}
+
+#map {
+  width: 100%;
+  height: 665px;
+}

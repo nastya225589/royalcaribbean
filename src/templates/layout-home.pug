@@ -15,18 +15,17 @@ html(class="no-js  page", lang="ru")
       link(rel="shortcut icon", href="/img/favicon.ico", type="image/x-icon")
       script.
         document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+      script(src="https://api-maps.yandex.ru/2.1/?apikey=6d09b679-d690-4c06-888c-a0f906342899\n&lang=ru_RU" type="text/javascript")
 
   body
     .page__inner
-      .page__content
+      +page-header()
 
-        div Тут «шапка»
-          block nav
+      main.page__content
 
         block content
 
-      .page__footer-wrapper
-        div Тут «подвал»
+      +page-footer()
 
-    block page-bottom
-      script(src="js/script.min.js")
+  block page-bottom
+    script(src="js/script.min.js")

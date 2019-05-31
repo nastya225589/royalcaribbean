@@ -1,0 +1,116 @@
+.card {
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: -195px;
+    right: 0;
+
+    @media (max-width: $screen-md) {
+      top: -115px;
+    }
+
+    @media screen and (max-width: $screen-sm) {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      position: relative;
+      top: 0;
+    }
+
+    @media screen and (max-width: $screen-xs) {
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    position: relative;
+    margin-right: 21px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+
+    @media (max-width: $screen-sm){
+      margin: 20px 0 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__photo {
+    height: 100%;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+  }
+
+  &__btn {
+    flex: 1;
+
+    .btn {
+      margin: 25px;
+      min-width: 130px;
+    }
+  }
+
+  &__wrap {
+    padding: 9px 25px;
+  }
+
+  &__title {
+    margin: 0 0 5px;
+  }
+
+  &__day {
+    padding-right: 21px;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      right: 10px;
+      top: 45%;
+      width: 2px;
+      height: 5px;
+      background: #fff;
+    }
+  }
+
+  &__link {
+    color: white;
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: bold;
+    font-size: $font-size--s;
+    line-height: 140.88%;
+  }
+
+  &__period {
+    display: flex;
+    font-family: $font-family-second;
+    font-style: normal;
+    font-weight: normal;
+    font-size: $font-size--m;
+    line-height: 140.4%;
+    color: #FFFFFF;
+
+    p {
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+mixin place(places)
+  .place__wrap
+    .place__item
+      .place__photo
+        img(alt= places.title src="/img/" + places.img + ".jpg")
+        .place__desc
+          span= places.title
+          small= places.text

@@ -1,0 +1,14 @@
+mixin page-footer()
+  footer.page-footer
+    .container
+      .page-footer__inner
+        +logo()
+
+        .page-footer__menu
+          +footer-nav("")
+
+        .page-footer__phone
+          svg(width="15", height="15")
+            use(xlink:href="img/sprite-svg.svg#footer-phone")
+          a.page-footer__phone_tel(href="tel:+1 305 341 0204") +1 305 341 0204
+          span Для справок и бронирования

@@ -1,0 +1,16 @@
+mixin english()
+  .english__wrap
+    .english__background
+      .english__inner
+        .english__desc
+          p.english__text Внимание! Услуги предоставляются на английском языке
+          p.english__text Поиск и приобретение круиза осуществляется на официальном англоязычном сайте или у наших
+            a.english__text_link(href="#partner") партнеров
+          .english__btn
+            +btn('Перейти на сайт →', 'circle')(cref="#")
+
+        .english__tel
+          h2.english__tel_title Телефон для справок
+          .english__tel_wrap
+            a.english__tel_link(href="tel:+1 305 341 0204") +1 305 341 0204
+            span Для справок

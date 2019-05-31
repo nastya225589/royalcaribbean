@@ -1,0 +1,100 @@
+// В этом файле должны быть стили для БЭМ-блока page-footer, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.page-footer {
+  &__inner {
+    padding: 25px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background: $third-color;
+
+    @media (max-width: $screen-sm) {
+      padding: 10px 0 30px;
+      flex-direction: column;
+    }
+  }
+
+  .logo {
+    padding-top: 11px;
+
+    @media (max-width: $screen-sm) {
+      margin: 0 auto;
+    }
+  }
+
+  &__menu {
+    padding-top: 11px;
+
+    .main-nav {
+      display: flex;
+      justify-content: space-between;
+
+      @media (max-width: $screen-sm) {
+        padding: 0 20px;
+        flex-direction: column;
+      }
+
+      &__list {
+        flex-direction: column;
+
+        &--left {
+          padding-right: 150px;
+
+          @media (max-width: $screen-md) {
+            padding-right: 60px;
+          }
+        }
+      }
+
+      &__item {
+        padding: 0 0 14px 0;
+
+        @media (max-width: $screen-xs) {
+          padding: 0 0 9px 0;
+        }
+
+        a {
+          font-family: $font-family;
+          font-style: normal;
+          font-weight: normal;
+          font-size: $font-size;
+          line-height: 140.4%;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  &__phone {
+    border: 1px solid #fff;
+    padding: 45px 17px;
+
+    @media (max-width: $screen-sm) {
+      margin: 9px 17px 0;
+      padding: 15px 22px;
+    }
+
+    &_tel {
+      margin-left: 11px;
+      font-family: $font-family;
+      font-style: normal;
+      font-weight: 800;
+      font-size: $font-size--l;
+      line-height: 28px;
+      color: #FFFFFF;
+    }
+
+    span {
+      margin-top: 12px;
+      display: inherit;
+      font-family: $font-family;
+      font-style: normal;
+      font-weight: normal;
+      font-size: $font-size;
+      line-height: 140.4%;
+      color: #FFFFFF;
+    }
+  }
+}
